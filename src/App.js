@@ -1,28 +1,10 @@
 import React from 'react';
-import { 
-  Navbar, 
-  NavbarBrand, 
-  Collapse, 
-  Nav,
-  NavItem,
-  NavLink,
-  NavbarToggler 
-} from 'reactstrap';
 
+import Header from './components/Header/Header.component';
 function App() {
   return (
     <div className="App">
-      <Navbar color="light" light expand="md">
-        <NavbarBrand>Minhas Séries</NavbarBrand>
-        <NavbarToggler />
-        <Collapse isOpen={true} navbar>
-          <Nav className="ml-auto" navbar>
-            <NavItem>
-              <NavLink href="/">Genêros</NavLink>
-            </NavItem>
-          </Nav>
-        </Collapse>
-      </Navbar>
+      <Header />
     </div>
   );
 }
