@@ -2,18 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import axios from 'axios';
 
+import Home from './components/Home/Home.component';
 import Header from './components/Header/Header.component';
-
-const Home = () => (
-  <h1>Home</h1>
-)
-
-const Genres = () => (
-  <h1>Generos</h1>
-)
+import Genres from './components/Genres/Genres.component';
 
 function App() {
-
   const [data, setData] = useEffect({})
   useEffect(() => {
     axios.get('/api'.then(res => {
