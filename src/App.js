@@ -5,6 +5,8 @@ import axios from 'axios';
 import Home from './components/Home/Home.component';
 import Header from './components/Header/Header.component';
 import Genres from './components/Genres/Genres.component';
+import NovoGenero from './components/NovoGenero/NovoGenero.component';
+import EditarGenero from './components/EditarGenero/EditarGenero.component';
 
 function App() {
   const [data, setData] = useEffect({})
@@ -19,6 +21,8 @@ function App() {
       <div>
         <Header />
         <Route exact path="/" component={Home} />
+        <Route exact path="/generos/:id" component={EditarGenero} />
+        <Route exact path="/generos/novogenero" component={NovoGenero} />
         <Route path="/generos" component={Genres} />
         <pre>{JSON.stringify(data)}</pre>
       </div>
